@@ -1,0 +1,23 @@
+<section class="page-main__video video" id="video">
+
+	<div class="wrapper">
+		<h2 data-i18n="video">Video</h2>
+	</div>
+
+	<div class="video__player">
+		<div class="video__poster"></div>
+		<video class="video__viewer" src="./assets/video/video.mp4"></video>
+		<button class="video__button" type="button"></button>
+		<div class="video__controls controls">
+			<button class="controls__play"></button>
+			<input class="controls__progress progress" name="progress" type="range" value="0" min="0" max="100"
+				step="1">
+			<button class="controls__sound"></button>
+			<input class="controls__volume volume" name="volume" type="range" value="0.2" min="0" max="1" step="0.05">
+			<button class="controls__undo skip" data-skip="-15"></button>
+			<button class="controls__redo skip" data-skip="15"></button>
+			<button class="controls__fullscreen"></button>
+		</div>
+	</div>
+
+</section>
