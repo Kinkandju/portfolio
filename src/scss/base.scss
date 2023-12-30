@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	min-width: 320px;
+
+	background-color: $black;
+
+	scrollbar-color: $gold $black;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+
+		background-color: $black;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 9em;
+		background-color: $gold;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+
+	border: none;
+}

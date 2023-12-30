@@ -1,0 +1,171 @@
+.price {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding: 75px 0 75px 0;
+
+	background-color: $black;
+
+	h2 {
+		margin: 0 0 75px 0;
+
+		&::before,
+		&::after {
+			width: 280px;
+		}
+
+		&::before {
+			right: 120px;
+		}
+
+		&::after {
+			left: 120px;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		padding: 75px 0 80px 0;
+
+		h2 {
+			margin: 0 0 69px 0;
+	
+			&::before,
+			&::after {
+				width: 120px;
+			}
+	
+			&::before {
+				right: 102px;
+			}
+	
+			&::after {
+				left: 102px;
+			}
+		}
+	}
+
+	@media (max-width: $mobil) {
+		padding: 45px 0 90px 0;
+	}
+}
+
+.price__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-self: stretch;
+	flex-wrap: wrap;
+
+	padding: 0 20px;
+
+	@media (max-width: $tablet) {
+		justify-content: center;
+		gap: 50px;
+
+		padding: 0 60px;
+	}
+
+	@media (max-width: $mobil) {
+		padding: 0 20px;
+	}
+}
+
+.price__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+
+	margin: 0 25px 25px 0;
+	padding: 40px 40px;
+
+	max-width: 450px;
+
+	border: 3px solid $gold;
+
+	&:nth-child(3n) {
+		margin: 0 0 25px 0;
+	}
+
+	&--name {
+		margin: 0 0 20px 0;
+
+		font: normal bold 28px $font--Merriweather;
+		line-height: 56px;
+
+		color: $white;
+	}
+
+	&--price {
+		margin: 0 0 21px 0;
+
+		font: normal bold 24px $font--Merriweather;
+		line-height: 48px;
+
+		color: $gold;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		margin: 0 0 40px 0;
+	}
+
+	li {
+		font: normal 18px $font--Inter;
+		line-height: 36px;
+		text-align: center;
+
+		color: $white;
+	}
+
+	&--link {
+		padding: 15px 40px;
+
+		&::before {
+			right: -46px;
+		}
+	
+		&::after {
+			left: -45px;
+		}
+
+		&:hover,
+		&:active {
+			transition: 0.5s ease-in-out;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		flex-grow: 0;
+
+		padding: 40px 96px;
+		margin: 0;
+
+		&:nth-child(3n) {
+			margin: 0;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+
+	}
+
+	@media (max-width: $mobil) {
+		padding: 40px 20px;
+
+		width: 100%;
+		max-width: 420px;
+
+		&--link {
+			padding: 15px 20px;
+		}
+	}
+}

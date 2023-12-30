@@ -1,0 +1,288 @@
+.page-header {
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding: 20px;
+
+	background-color: $black;
+	background-image: url('./assets/img/bg_desktop.jpg');
+	background-repeat: no-repeat;
+	background-position: center 0;
+
+	@media (min-width: $medium-tablet) and (max-width: $tablet) {
+		background-repeat: no-repeat;
+		background-position: center 0;
+		background-size: cover;
+	}
+
+	@media (max-width: $tablet) {
+		justify-content: space-between;
+
+		padding: 23px 64px 22px 60px;
+
+		background-position: -5px -29px;
+		background-size: auto 620px;
+	}
+
+	@media (max-width: $mobil) {
+		padding: 23px 20px 22px 20px;
+	}
+}
+
+.page-header__logo {
+	position: relative;
+	top: 2px;
+
+	width: 50px;
+	height: 40px;
+
+	fill: $white;
+
+	&:hover {
+		fill: $gold;
+		transition: 0.5s;
+	}
+}
+
+@keyframes moveLeft {
+	0% {
+		right: -100%;
+	}
+
+	100% {
+		right: 0;
+	}
+}
+
+@keyframes moveRight {
+	0% {
+		right: 0;
+	}
+
+	100% {
+		right: -100%;
+	}
+}
+
+.page-header__navigation {
+	margin-left: auto;
+
+	@media (max-width: $tablet) {
+		display: none;
+
+		&--opened {
+			position: absolute;
+			top: 0;
+			right: 0;
+	
+			display: flex;
+			flex-direction: column;
+			align-self: stretch;
+	
+			width: 80.7%;
+		
+			background-color: $black;
+	
+			z-index: 100;
+			animation-name: moveLeft;
+			animation-duration: 1s;
+		}
+
+		&--closed {
+			animation-name: moveRight;
+			animation-duration: 1s;
+		}
+	}
+
+	@media (max-width: $mobil) {
+		width: 100%;
+	}
+}
+
+.page-header__list {
+	display: flex;
+
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 16px;
+
+		padding: 134px 0 100% 127px;
+
+		background-color: $black;
+	}
+
+	@media (max-width: $mobil) {
+		padding: 134px 0 100% 20%;
+	}
+}
+
+.page-header__item {
+	margin: 0 30px 0 0;
+
+	font: normal 20px $font--Inter;
+	line-height: 50px;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	a {
+		color: $white;
+
+		&:hover,
+		&:active {
+			color: $gold;
+			transition: 0.5s;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		margin: 0;
+
+		font: normal 35px $font--Inter;
+		line-height: 72.5px;
+	}
+}
+
+.page-header__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.page-header__lang-group {
+	font: bold 20px $font--Inter;
+
+	color: $white;
+}
+
+.page-header__lang {
+	padding: 0 0 0 5px;
+
+	font: bold 20px $font--Inter;
+	text-transform: uppercase;
+
+	color: $white;
+
+	cursor: pointer;
+
+	&:first-child {
+		margin: 0 0 0 35px;
+	}
+
+	&--active {
+		color: $gold;
+	}
+
+	@media (max-width: $tablet) {
+		&:first-child {
+			margin: 0;
+		}	
+	}
+}
+
+.page-header__menu {
+	display: none;
+
+	@media (max-width: $tablet) {
+		position: relative;
+
+		display: block;
+
+		margin: 0 0 0 20px;
+
+		width: 38px;
+		height: 26px;
+
+		border: none;
+		background-color: transparent;
+
+		cursor: pointer;
+
+		z-index: 100;
+
+		&--opened::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		
+			width: 100%;
+			height: 3px;
+		
+			background-color: $white;
+			box-shadow: 0 13px 0 0 $white, 0 25px 0 0 $white;
+
+			content: "";
+		  }
+
+		&--closed::before,
+		&--closed::after {
+			position: absolute;
+			top: 9px;
+			left: 0;
+
+			width: 100%;
+			height: 3px;
+
+			background-color: $white;
+
+			content: "";
+		}
+
+		&--closed::before {
+			transform: rotate(45deg);
+			box-shadow: none;
+		}
+		
+		&--closed::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	@media (max-width: $tablet) {
+		margin: 0 0 0 15px;
+	}
+}
+
+.page-header__theme {
+	margin: 0 0 0 35px;
+	padding: 0;
+
+	width: 45px;
+	height: 45px;
+
+	border: none;
+	background-color: transparent;
+
+	cursor: pointer;
+
+	&--icon-sun {
+		display: block;
+
+		fill: $white;
+
+		&:hover {
+			fill: $gold;
+
+			transition: 0.5s;
+		}
+	}
+
+	&--icon-moon {
+		display: none;
+	}
+
+	@media (max-width: $tablet) {
+		margin: 0 0 0 20px;
+	}
+
+	@media (max-width: $mobil) {
+		margin: 0 0 0 10px;
+	}
+}

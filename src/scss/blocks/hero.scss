@@ -1,0 +1,104 @@
+.hero {
+	padding: 182px 80px 346px 80px;
+
+	background-color: $black;
+	background-image: url('./assets/img/bg_desktop.jpg');
+	background-position: center -90px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media (min-width: $medium-tablet) and (max-width: $tablet) {
+		background-position: center -90px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	@media (max-width: $tablet) {
+		padding: 79px 60px 167px 60px;
+
+		background-position: -5px -119px;
+		background-size: auto 620px;
+	}
+
+	@media (max-width: $mobil) {
+		padding: 79px 20px 160px 20px;
+	}
+
+	h1 {
+		margin: 0 0 33px 0;
+
+		font: normal bold 60px $font--Merriweather;
+
+		color: $white;
+
+		@media (max-width: $tablet) {
+			margin: 0 0 20px 0;
+
+			font-size: 32px;
+			font-weight: normal;
+			line-height: 64px;
+		}
+
+		@media (max-width: $mobil) {
+			font-size: 28px;
+			line-height: 46px;
+		}
+	}
+
+	p {
+		margin: 0 0 40px 0;
+
+		max-width: 490px;
+
+		font: normal 20px $font--Inter;
+		line-height: 40px;
+
+		color: $white;
+
+		@media (max-width: $tablet) {
+			margin: 0 0 74px 0;
+
+			max-width: 65%;
+
+			font-size: 20px;
+			line-height: 24.2px;
+		}
+
+		@media (min-width: $min-mobil) and (max-width: $mobil) {
+			max-width: 65%;
+		}
+
+		@media (max-width: $mobil) {
+			margin: 0 0 55px 0;
+
+			max-width: 95%;
+
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+}
+
+.hero__button {
+	border: none;
+
+	&::before {
+		right: -46px;
+	}
+
+	&::after {
+		left: -46px;
+	}
+
+	@media (max-width: $tablet) {
+		padding: 15px 73px;
+
+		&::before {
+			right: -45px;
+		}
+	
+		&::after {
+			left: -44px;
+		}
+	}
+}

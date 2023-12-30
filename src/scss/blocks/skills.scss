@@ -1,0 +1,139 @@
+.skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding: 115px 0 40px 0;
+
+	background-color: $black;
+
+	h2 {
+		margin: 0 0 75px 0;
+
+		&::before,
+		&::after {
+			width: 276px;
+		}
+
+		&::before {
+			right: 130px;
+		}
+
+		&::after {
+			left: 130px;
+		}
+	}
+
+	@media (max-width: $tablet) {
+		padding: 100px 0 59px 0;
+
+		h2 {
+			margin: 0 0 65px 0;
+
+			&::before,
+			&::after {
+				width: 116px;
+			}
+	
+			&::before {
+				right: 110px;
+			}
+	
+			&::after {
+				left: 110px;
+			}
+		}
+	}
+
+	@media (max-width: $mobil) {
+		padding: 90px 0 45px 0;
+	}
+}
+
+.skills__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	padding: 0 20px;
+
+	@media (max-width: $tablet) {
+		justify-content: space-around;
+
+		padding: 0 40px;
+	}
+
+	@media (max-width: $mobil) {
+		padding: 0 20px;
+	}
+}
+
+.skills__item {
+	position: relative;
+	left: 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	margin: 0 40px 40px 0;
+	padding: 0 10px;
+
+	flex-basis: 296px;
+
+	color: $white;
+
+	&:nth-child(4) {
+		margin: 0 0 40px 0;
+
+		p {
+			padding: 0 10px;
+		}
+	}
+
+	span {
+		margin: 0 0 20px 0;
+
+		font: normal bold 20px $font--Inter;
+		line-height: 40px;
+	}
+
+	p {
+		font: normal 18px $font--Inter;
+		line-height: 36px;
+		text-align: center;
+	}
+
+	svg {
+		margin: 0 0 50px 0;
+	}
+
+	@media (max-width: $tablet) {
+		left: -2px;
+
+		margin: 0 0 73px 0;
+
+		span {
+			margin: 0 0 19px 0;
+		}
+
+		p {
+			line-height: 24px;
+		}
+
+		svg {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	@media (max-width: $mobil) {
+		&:nth-child(4) {
+			p {
+				padding: 0;
+			}
+		}
+	}
+}

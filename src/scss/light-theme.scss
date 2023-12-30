@@ -1,0 +1,296 @@
+.light-theme {
+	background-color: $white;
+
+	scrollbar-color: $gold $white;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+
+		background-color: $white;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 9em;
+		background-color: $gold;
+	}
+
+	section {
+		background-color: $white;
+	}
+
+	h1,
+	h2,
+	h3,
+	p,
+	span,
+	li {
+		color: $black;
+	}
+
+	h2 {
+		background-color: $white;
+
+		&::before,
+		&::after {
+			background-color: $black;
+		}
+	}
+
+	.wrapper {
+		&::before {
+			background-color: $black;
+		}
+	}
+
+	.page-header,
+	.hero {
+		background: url('./assets/img/bg_desktop_light.jpg');
+	}
+
+	.page-header {
+		background-position: center 0;
+
+		@media (min-width: $medium-tablet) and (max-width: $tablet) {
+			background-repeat: no-repeat;
+			background-position: center 0;
+			background-size: cover;
+		}
+
+		@media (max-width: $tablet) {
+			background-position: -5px -30px;
+			background-size: auto 620px;
+		}
+
+		svg {
+			fill: $black;
+
+			&:hover {
+				fill: $gold;
+			}
+		}
+
+		.page-header__navigation {
+			@media (max-width: $tablet) {
+				&--opened {
+					background-color: $white;
+				}
+			}
+		}
+
+		.page-header__list {
+			@media (max-width: $tablet) {
+				background-color: $white;
+			}
+		}
+
+		.page-header__item {
+			a {
+				color: $black;
+
+				&:hover,
+				&:active {
+					color: $white;
+				}
+			}
+		}
+
+		.page-header__menu {
+			@media (max-width: $tablet) {
+				&--opened::before {
+					background-color: $black;
+					box-shadow: 0 13px 0 0 $black, 0 25px 0 0 $black;
+				}
+
+				&--closed::before,
+				&--closed::after {
+					background-color: $black;
+				}
+			}
+		}
+
+		.page-header__theme {
+			&--icon-sun {
+				display: none;
+			}
+
+			&--icon-moon {
+				display: block;
+
+				&:hover {
+					fill: $gold;
+		
+					transition: 0.5s;
+				}
+			}
+		}
+
+		.page-header__lang-group {
+			color: $black;
+		}
+
+		.page-header__lang {
+			color: $black;
+
+			&--active {
+				color: $white;
+			}
+		}
+	}
+
+	.hero {
+		background-position: center -90px;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media (min-width: $medium-tablet) and (max-width: $tablet) {
+			background-position: center -90px;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	
+		@media (max-width: $tablet) {
+			background-position: -5px -120px;
+			background-size: auto 620px;
+		}
+
+		.hero__button {
+			background-color: $white;
+
+			&::before {
+				right: -45.5px;
+
+				border-bottom: 55px solid $transparent_black_light;
+			}
+
+			&::after {
+				left: -45px;
+
+				border-top: 55px solid $transparent_black_light;
+			}
+
+			&:hover,
+			&:active {
+				color: $gold;
+				background-color: $transparent_black;
+
+				transition: 0.5s ease-in-out;
+			}
+		}
+	}
+
+	.portfolio {
+		.buttons__item {
+			button {
+				padding: 12px 68px;
+	
+				color: $black;
+				background-color: $gold;
+	
+				&:hover {
+					color: $white;
+				}
+			}
+	
+			&--active {
+				button {
+					color: $gold;
+					background-color: $black;
+					border: 3px solid $gold;
+		
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.price {
+		.price__item {
+			&--price {
+				color: $gold;
+			}
+
+			&--link {
+				&:hover,
+				&:active {
+					color: $gold;
+					background-color: $black;
+				}
+			}
+		}
+	}
+
+	.contacts {
+		background: url('./assets/img/contacts_desktop_light.jpg');
+		background-position: center 0;
+		background-repeat: no-repeat;
+
+		h2 {
+			background-color: transparent;
+		}
+
+		@media (max-width: $tablet) {
+			background-position: bottom 60% center;
+			background-size: cover;
+		}
+
+		input[type=tel],
+		input[type=email],
+		textarea {
+			color: $black;
+			background-color: $transparent_white;
+
+			&::placeholder {
+				color: $black;
+			}
+		}
+
+		button {
+			background-color: $white;
+
+			&::before {
+				right: -45.5px;
+
+				border-bottom: 55px solid $transparent_black_light;
+			}
+
+			&::after {
+				left: -45px;
+
+				border-top: 55px solid $transparent_black_light;
+			}
+
+			&:hover,
+			&:active {
+				color: $gold;
+				background-color: $transparent_black;
+
+				transition: 0.5s ease-in-out;
+			}
+		}
+	}
+
+	.page-footer {
+		background-color: $white;
+
+		a {
+			color: $black;
+
+			&:hover,
+			&:active {
+				color: $gold;
+			}
+		}
+
+		svg {
+			fill: $black;
+
+			&:hover,
+			&:active {
+				fill: $gold;
+			}
+		}
+	}
+}
